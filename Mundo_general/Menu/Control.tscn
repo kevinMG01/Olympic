@@ -1,6 +1,7 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://icon.png" type="Texture" id=1]
+[ext_resource path="res://Mundo_general/Menu/Control.gd" type="Script" id=2]
 
 [sub_resource type="StyleBoxEmpty" id=4]
 
@@ -19,8 +20,8 @@ bg_color = Color( 0.65098, 0.0509804, 0.0509804, 1 )
 [sub_resource type="StyleBoxFlat" id=6]
 bg_color = Color( 0.164706, 0.156863, 0.156863, 1 )
 
-[sub_resource type="StyleBoxFlat" id=7]
-bg_color = Color( 0.0823529, 0.0588235, 0.419608, 1 )
+[sub_resource type="StyleBoxFlat" id=12]
+bg_color = Color( 0.129412, 0.282353, 0.529412, 1 )
 
 [sub_resource type="StyleBoxFlat" id=8]
 draw_center = false
@@ -33,11 +34,132 @@ border_color = Color( 0.0823529, 0.0823529, 0.0823529, 1 )
 
 [sub_resource type="StyleBoxEmpty" id=11]
 
-[sub_resource type="Animation" id=12]
-resource_name = "button_step_001"
+[sub_resource type="StyleBoxEmpty" id=13]
 
-[sub_resource type="Animation" id=13]
-resource_name = "button_step_002"
+[sub_resource type="AnimationNodeAnimation" id=14]
+animation = "Button_step_001"
+
+[sub_resource type="AnimationNodeAnimation" id=15]
+animation = "Button_step_002"
+
+[sub_resource type="AnimationNodeAnimation" id=16]
+animation = "Button_step_003"
+
+[sub_resource type="AnimationNodeBlendSpace1D" id=17]
+blend_point_0/node = SubResource( 14 )
+blend_point_0/pos = 0.0
+blend_point_1/node = SubResource( 15 )
+blend_point_1/pos = 1.0
+blend_point_2/node = SubResource( 16 )
+blend_point_2/pos = 2.0
+max_space = 4.0
+snap = 1.0
+
+[sub_resource type="Animation" id=18]
+resource_name = "Button_step_001"
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("VBoxContainer/PanelContainer/HBoxContainer/PanelContainer:rect_min_size:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 424, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("VBoxContainer/PanelContainer/HBoxContainer/PanelContainer:rect_min_size:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("VBoxContainer/PanelContainer/HBoxContainer/PanelContainer2:rect_min_size:x")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("VBoxContainer/PanelContainer/HBoxContainer/PanelContainer2:rect_min_size:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/4/type = "bezier"
+tracks/4/path = NodePath("VBoxContainer/PanelContainer/HBoxContainer/PanelContainer3:rect_min_size:x")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/5/type = "bezier"
+tracks/5/path = NodePath("VBoxContainer/PanelContainer/HBoxContainer/PanelContainer3:rect_min_size:y")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/6/type = "bezier"
+tracks/6/path = NodePath("VBoxContainer/PanelContainer/Control/PanelContainer:rect_position:x")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/7/type = "bezier"
+tracks/7/path = NodePath("VBoxContainer/PanelContainer/Control/PanelContainer:rect_position:y")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/8/type = "bezier"
+tracks/8/path = NodePath("VBoxContainer/PanelContainer/Control/PanelContainer:rect_size:x")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"points": PoolRealArray( 424, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/9/type = "bezier"
+tracks/9/path = NodePath("VBoxContainer/PanelContainer/Control/PanelContainer:rect_size:y")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"points": PoolRealArray( 144, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+
+[sub_resource type="Animation" id=19]
+resource_name = "Button_step_002"
 tracks/0/type = "bezier"
 tracks/0/path = NodePath("VBoxContainer/PanelContainer/HBoxContainer/PanelContainer2:rect_min_size:x")
 tracks/0/interp = 1
@@ -45,7 +167,7 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"points": PoolRealArray( 420, -0.25, 0, 0.25, 0 ),
+"points": PoolRealArray( 426, -0.25, 0, 0.25, 0 ),
 "times": PoolRealArray( 0 )
 }
 tracks/1/type = "bezier"
@@ -99,155 +221,153 @@ tracks/5/keys = {
 "times": PoolRealArray( 0 )
 }
 tracks/6/type = "bezier"
-tracks/6/path = NodePath("VBoxContainer/PanelContainer/HBoxContainer/PanelContainer2/VBoxContainer/CenterContainer/Control/TextureRect:rect_size:x")
+tracks/6/path = NodePath("VBoxContainer/PanelContainer/Control/PanelContainer:rect_position:x")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/imported = false
 tracks/6/enabled = true
 tracks/6/keys = {
-"points": PoolRealArray( 144, -0.25, 0, 0.25, 0 ),
+"points": PoolRealArray( 331, -0.25, 0, 0.25, 0 ),
 "times": PoolRealArray( 0 )
 }
 tracks/7/type = "bezier"
-tracks/7/path = NodePath("VBoxContainer/PanelContainer/HBoxContainer/PanelContainer2/VBoxContainer/CenterContainer/Control/TextureRect:rect_size:y")
+tracks/7/path = NodePath("VBoxContainer/PanelContainer/Control/PanelContainer:rect_position:y")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/imported = false
 tracks/7/enabled = true
 tracks/7/keys = {
-"points": PoolRealArray( 144, -0.25, 0, 0.25, 0 ),
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
 "times": PoolRealArray( 0 )
 }
 tracks/8/type = "bezier"
-tracks/8/path = NodePath("VBoxContainer/PanelContainer/HBoxContainer/PanelContainer2/VBoxContainer/CenterContainer/Control/TextureRect:rect_position:x")
+tracks/8/path = NodePath("VBoxContainer/PanelContainer/Control/PanelContainer:rect_size:x")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/imported = false
 tracks/8/enabled = true
 tracks/8/keys = {
-"points": PoolRealArray( -72, -0.25, 0, 0.25, 0 ),
+"points": PoolRealArray( 424, -0.25, 0, 0.25, 0 ),
 "times": PoolRealArray( 0 )
 }
 tracks/9/type = "bezier"
-tracks/9/path = NodePath("VBoxContainer/PanelContainer/HBoxContainer/PanelContainer2/VBoxContainer/CenterContainer/Control/TextureRect:rect_position:y")
+tracks/9/path = NodePath("VBoxContainer/PanelContainer/Control/PanelContainer:rect_size:y")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/imported = false
 tracks/9/enabled = true
 tracks/9/keys = {
-"points": PoolRealArray( -72, -0.25, 0, 0.25, 0 ),
+"points": PoolRealArray( 144, -0.25, 0, 0.25, 0 ),
 "times": PoolRealArray( 0 )
 }
-tracks/10/type = "bezier"
-tracks/10/path = NodePath("VBoxContainer/PanelContainer/HBoxContainer/PanelContainer2/VBoxContainer/Label:modulate:r")
-tracks/10/interp = 1
-tracks/10/loop_wrap = true
-tracks/10/imported = false
-tracks/10/enabled = true
-tracks/10/keys = {
-"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+
+[sub_resource type="Animation" id=20]
+resource_name = "Button_step_003"
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("VBoxContainer/PanelContainer/HBoxContainer/PanelContainer3:rect_min_size:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 424, -0.25, 0, 0.25, 0 ),
 "times": PoolRealArray( 0 )
 }
-tracks/11/type = "bezier"
-tracks/11/path = NodePath("VBoxContainer/PanelContainer/HBoxContainer/PanelContainer2/VBoxContainer/Label:modulate:g")
-tracks/11/interp = 1
-tracks/11/loop_wrap = true
-tracks/11/imported = false
-tracks/11/enabled = true
-tracks/11/keys = {
-"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0 )
-}
-tracks/12/type = "bezier"
-tracks/12/path = NodePath("VBoxContainer/PanelContainer/HBoxContainer/PanelContainer2/VBoxContainer/Label:modulate:b")
-tracks/12/interp = 1
-tracks/12/loop_wrap = true
-tracks/12/imported = false
-tracks/12/enabled = true
-tracks/12/keys = {
-"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0 )
-}
-tracks/13/type = "bezier"
-tracks/13/path = NodePath("VBoxContainer/PanelContainer/HBoxContainer/PanelContainer2/VBoxContainer/Label:modulate:a")
-tracks/13/interp = 1
-tracks/13/loop_wrap = true
-tracks/13/imported = false
-tracks/13/enabled = true
-tracks/13/keys = {
-"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0 )
-}
-tracks/14/type = "bezier"
-tracks/14/path = NodePath("VBoxContainer/PanelContainer/HBoxContainer/PanelContainer2/VBoxContainer/Label:rect_min_size:x")
-tracks/14/interp = 1
-tracks/14/loop_wrap = true
-tracks/14/imported = false
-tracks/14/enabled = true
-tracks/14/keys = {
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("VBoxContainer/PanelContainer/HBoxContainer/PanelContainer3:rect_min_size:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
 "points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
 "times": PoolRealArray( 0 )
 }
-tracks/15/type = "bezier"
-tracks/15/path = NodePath("VBoxContainer/PanelContainer/HBoxContainer/PanelContainer2/VBoxContainer/Label:rect_min_size:y")
-tracks/15/interp = 1
-tracks/15/loop_wrap = true
-tracks/15/imported = false
-tracks/15/enabled = true
-tracks/15/keys = {
-"points": PoolRealArray( 32, -0.25, 0, 0.25, 0 ),
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("VBoxContainer/PanelContainer/HBoxContainer/PanelContainer:rect_min_size:x")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
 "times": PoolRealArray( 0 )
 }
-tracks/16/type = "bezier"
-tracks/16/path = NodePath("VBoxContainer/PanelContainer/HBoxContainer/PanelContainer/VBoxContainer/CenterContainer/Control/TextureRect:rect_size:x")
-tracks/16/interp = 1
-tracks/16/loop_wrap = true
-tracks/16/imported = false
-tracks/16/enabled = true
-tracks/16/keys = {
-"points": PoolRealArray( 120, -0.25, 0, 0.25, 0 ),
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("VBoxContainer/PanelContainer/HBoxContainer/PanelContainer:rect_min_size:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
 "times": PoolRealArray( 0 )
 }
-tracks/17/type = "bezier"
-tracks/17/path = NodePath("VBoxContainer/PanelContainer/HBoxContainer/PanelContainer/VBoxContainer/CenterContainer/Control/TextureRect:rect_size:y")
-tracks/17/interp = 1
-tracks/17/loop_wrap = true
-tracks/17/imported = false
-tracks/17/enabled = true
-tracks/17/keys = {
-"points": PoolRealArray( 120, -0.25, 0, 0.25, 0 ),
+tracks/4/type = "bezier"
+tracks/4/path = NodePath("VBoxContainer/PanelContainer/HBoxContainer/PanelContainer2:rect_min_size:x")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
 "times": PoolRealArray( 0 )
 }
-tracks/18/type = "bezier"
-tracks/18/path = NodePath("VBoxContainer/PanelContainer/HBoxContainer/PanelContainer/VBoxContainer/CenterContainer/Control/TextureRect:rect_position:x")
-tracks/18/interp = 1
-tracks/18/loop_wrap = true
-tracks/18/imported = false
-tracks/18/enabled = true
-tracks/18/keys = {
-"points": PoolRealArray( -60, -0.25, 0, 0.25, 0 ),
+tracks/5/type = "bezier"
+tracks/5/path = NodePath("VBoxContainer/PanelContainer/HBoxContainer/PanelContainer2:rect_min_size:y")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
 "times": PoolRealArray( 0 )
 }
-tracks/19/type = "bezier"
-tracks/19/path = NodePath("VBoxContainer/PanelContainer/HBoxContainer/PanelContainer/VBoxContainer/CenterContainer/Control/TextureRect:rect_position:y")
-tracks/19/interp = 1
-tracks/19/loop_wrap = true
-tracks/19/imported = false
-tracks/19/enabled = true
-tracks/19/keys = {
-"points": PoolRealArray( -60, -0.25, 0, 0.25, 0 ),
+tracks/6/type = "bezier"
+tracks/6/path = NodePath("VBoxContainer/PanelContainer/Control/PanelContainer:rect_position:x")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"points": PoolRealArray( 660, -0.25, 0, 0.25, 0 ),
 "times": PoolRealArray( 0 )
 }
-
-[sub_resource type="Animation" id=14]
-resource_name = "button_step_003"
-
-[sub_resource type="Animation" id=15]
-resource_name = "button_step_004"
+tracks/7/type = "bezier"
+tracks/7/path = NodePath("VBoxContainer/PanelContainer/Control/PanelContainer:rect_position:y")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/8/type = "bezier"
+tracks/8/path = NodePath("VBoxContainer/PanelContainer/Control/PanelContainer:rect_size:x")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"points": PoolRealArray( 424, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/9/type = "bezier"
+tracks/9/path = NodePath("VBoxContainer/PanelContainer/Control/PanelContainer:rect_size:y")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"points": PoolRealArray( 144, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+script = ExtResource( 2 )
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 anchor_right = 1.0
@@ -261,9 +381,10 @@ theme = SubResource( 5 )
 scroll_vertical_enabled = false
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/ScrollContainer"]
-margin_right = 3248.0
+margin_right = 3240.0
 margin_bottom = 1772.0
 size_flags_vertical = 3
+custom_constants/separation = 0
 
 [node name="PanelContainer" type="PanelContainer" parent="VBoxContainer/ScrollContainer/HBoxContainer"]
 margin_right = 1080.0
@@ -273,16 +394,16 @@ mouse_filter = 2
 custom_styles/panel = SubResource( 1 )
 
 [node name="PanelContainer2" type="PanelContainer" parent="VBoxContainer/ScrollContainer/HBoxContainer"]
-margin_left = 1084.0
-margin_right = 2164.0
+margin_left = 1080.0
+margin_right = 2160.0
 margin_bottom = 1772.0
 rect_min_size = Vector2( 1080, 0 )
 mouse_filter = 2
 custom_styles/panel = SubResource( 2 )
 
 [node name="PanelContainer3" type="PanelContainer" parent="VBoxContainer/ScrollContainer/HBoxContainer"]
-margin_left = 2168.0
-margin_right = 3248.0
+margin_left = 2160.0
+margin_right = 3240.0
 margin_bottom = 1772.0
 rect_min_size = Vector2( 1080, 0 )
 mouse_filter = 2
@@ -298,12 +419,15 @@ custom_styles/panel = SubResource( 6 )
 [node name="Control" type="Control" parent="VBoxContainer/PanelContainer"]
 margin_right = 1080.0
 margin_bottom = 144.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 
 [node name="PanelContainer" type="PanelContainer" parent="VBoxContainer/PanelContainer/Control"]
-margin_left = 327.0
-margin_right = 753.0
+margin_left = 331.442
+margin_right = 755.442
 margin_bottom = 144.0
-custom_styles/panel = SubResource( 7 )
+rect_min_size = Vector2( 424, 0 )
+custom_styles/panel = SubResource( 12 )
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/PanelContainer"]
 margin_right = 1080.0
@@ -314,26 +438,26 @@ size_flags_vertical = 3
 custom_constants/separation = 0
 
 [node name="PanelContainer" type="PanelContainer" parent="VBoxContainer/PanelContainer/HBoxContainer"]
-margin_right = 330.0
+margin_right = 327.0
 margin_bottom = 144.0
 size_flags_horizontal = 3
 custom_styles/panel = SubResource( 8 )
 
 [node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/PanelContainer/HBoxContainer/PanelContainer"]
 margin_left = 4.0
-margin_right = 330.0
+margin_right = 327.0
 margin_bottom = 144.0
 
 [node name="CenterContainer" type="CenterContainer" parent="VBoxContainer/PanelContainer/HBoxContainer/PanelContainer/VBoxContainer"]
-margin_right = 326.0
+margin_right = 323.0
 margin_bottom = 126.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="Control" type="Control" parent="VBoxContainer/PanelContainer/HBoxContainer/PanelContainer/VBoxContainer/CenterContainer"]
-margin_left = 163.0
+margin_left = 161.0
 margin_top = 63.0
-margin_right = 163.0
+margin_right = 161.0
 margin_bottom = 63.0
 
 [node name="TextureRect" type="TextureRect" parent="VBoxContainer/PanelContainer/HBoxContainer/PanelContainer/VBoxContainer/CenterContainer/Control"]
@@ -351,7 +475,7 @@ stretch_mode = 6
 
 [node name="Label" type="Label" parent="VBoxContainer/PanelContainer/HBoxContainer/PanelContainer/VBoxContainer"]
 margin_top = 130.0
-margin_right = 326.0
+margin_right = 323.0
 margin_bottom = 144.0
 size_flags_horizontal = 3
 text = "Tienda"
@@ -360,7 +484,7 @@ valign = 1
 
 [node name="Button" type="Button" parent="VBoxContainer/PanelContainer/HBoxContainer/PanelContainer"]
 margin_left = 4.0
-margin_right = 330.0
+margin_right = 327.0
 margin_bottom = 144.0
 focus_mode = 0
 custom_styles/hover = SubResource( 9 )
@@ -368,28 +492,27 @@ custom_styles/pressed = SubResource( 10 )
 custom_styles/normal = SubResource( 11 )
 
 [node name="PanelContainer2" type="PanelContainer" parent="VBoxContainer/PanelContainer/HBoxContainer"]
-margin_left = 330.0
-margin_right = 750.0
+margin_left = 327.0
+margin_right = 752.427
 margin_bottom = 144.0
-rect_min_size = Vector2( 420, 0 )
+rect_min_size = Vector2( 425.427, 0 )
 size_flags_horizontal = 3
-custom_styles/panel = SubResource( 8 )
+custom_styles/panel = SubResource( 13 )
 
 [node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/PanelContainer/HBoxContainer/PanelContainer2"]
-margin_left = 4.0
-margin_right = 420.0
+margin_right = 425.427
 margin_bottom = 144.0
 
 [node name="CenterContainer" type="CenterContainer" parent="VBoxContainer/PanelContainer/HBoxContainer/PanelContainer2/VBoxContainer"]
-margin_right = 416.0
+margin_right = 425.0
 margin_bottom = 108.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="Control" type="Control" parent="VBoxContainer/PanelContainer/HBoxContainer/PanelContainer2/VBoxContainer/CenterContainer"]
-margin_left = 208.0
+margin_left = 212.0
 margin_top = 54.0
-margin_right = 208.0
+margin_right = 212.0
 margin_bottom = 54.0
 
 [node name="TextureRect" type="TextureRect" parent="VBoxContainer/PanelContainer/HBoxContainer/PanelContainer2/VBoxContainer/CenterContainer/Control"]
@@ -397,54 +520,54 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -72.0
-margin_top = -72.0
-margin_right = 72.0
-margin_bottom = 72.0
+margin_left = -60.0
+margin_top = -60.0
+margin_right = 60.0
+margin_bottom = 60.0
 texture = ExtResource( 1 )
 expand = true
 stretch_mode = 6
 
 [node name="Label" type="Label" parent="VBoxContainer/PanelContainer/HBoxContainer/PanelContainer2/VBoxContainer"]
 margin_top = 112.0
-margin_right = 416.0
+margin_right = 425.0
 margin_bottom = 144.0
 rect_min_size = Vector2( 0, 32 )
 size_flags_horizontal = 3
-text = "Tienda"
+text = "Jugar"
 align = 1
 valign = 1
 
 [node name="Button" type="Button" parent="VBoxContainer/PanelContainer/HBoxContainer/PanelContainer2"]
-margin_left = 4.0
-margin_right = 420.0
+margin_right = 425.427
 margin_bottom = 144.0
 custom_styles/hover = SubResource( 9 )
 custom_styles/pressed = SubResource( 10 )
 custom_styles/normal = SubResource( 11 )
 
 [node name="PanelContainer3" type="PanelContainer" parent="VBoxContainer/PanelContainer/HBoxContainer"]
-margin_left = 750.0
+margin_left = 752.0
 margin_right = 1080.0
 margin_bottom = 144.0
+rect_min_size = Vector2( 0.569942, 0 )
 size_flags_horizontal = 3
 custom_styles/panel = SubResource( 8 )
 
 [node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/PanelContainer/HBoxContainer/PanelContainer3"]
 margin_left = 4.0
-margin_right = 330.0
+margin_right = 328.0
 margin_bottom = 144.0
 
 [node name="CenterContainer" type="CenterContainer" parent="VBoxContainer/PanelContainer/HBoxContainer/PanelContainer3/VBoxContainer"]
-margin_right = 326.0
+margin_right = 324.0
 margin_bottom = 126.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="Control" type="Control" parent="VBoxContainer/PanelContainer/HBoxContainer/PanelContainer3/VBoxContainer/CenterContainer"]
-margin_left = 163.0
+margin_left = 162.0
 margin_top = 63.0
-margin_right = 163.0
+margin_right = 162.0
 margin_bottom = 63.0
 
 [node name="TextureRect" type="TextureRect" parent="VBoxContainer/PanelContainer/HBoxContainer/PanelContainer3/VBoxContainer/CenterContainer/Control"]
@@ -462,7 +585,7 @@ stretch_mode = 6
 
 [node name="Label" type="Label" parent="VBoxContainer/PanelContainer/HBoxContainer/PanelContainer3/VBoxContainer"]
 margin_top = 130.0
-margin_right = 326.0
+margin_right = 324.0
 margin_bottom = 144.0
 size_flags_horizontal = 3
 text = "Tienda"
@@ -471,14 +594,25 @@ valign = 1
 
 [node name="Button" type="Button" parent="VBoxContainer/PanelContainer/HBoxContainer/PanelContainer3"]
 margin_left = 4.0
-margin_right = 330.0
+margin_right = 328.0
 margin_bottom = 144.0
 custom_styles/hover = SubResource( 9 )
 custom_styles/pressed = SubResource( 10 )
 custom_styles/normal = SubResource( 11 )
 
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource( 17 )
+anim_player = NodePath("../AnimationPlayer")
+active = true
+parameters/blend_position = 1.00134
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/button_step_001 = SubResource( 12 )
-anims/button_step_002 = SubResource( 13 )
-anims/button_step_003 = SubResource( 14 )
-anims/button_step_004 = SubResource( 15 )
+anims/Button_step_001 = SubResource( 18 )
+anims/Button_step_002 = SubResource( 19 )
+anims/Button_step_003 = SubResource( 20 )
+
+[connection signal="scroll_ended" from="VBoxContainer/ScrollContainer" to="." method="_on_ScrollContainer_scroll_ended"]
+[connection signal="scroll_started" from="VBoxContainer/ScrollContainer" to="." method="_on_ScrollContainer_scroll_started"]
+[connection signal="pressed" from="VBoxContainer/PanelContainer/HBoxContainer/PanelContainer/Button" to="." method="_on_Button_pressed" binds= [ 1 ]]
+[connection signal="pressed" from="VBoxContainer/PanelContainer/HBoxContainer/PanelContainer2/Button" to="." method="_on_Button_pressed" binds= [ 2 ]]
+[connection signal="pressed" from="VBoxContainer/PanelContainer/HBoxContainer/PanelContainer3/Button" to="." method="_on_Button_pressed" binds= [ 3 ]]
