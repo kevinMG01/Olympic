@@ -11,6 +11,7 @@ config_version=4
 [application]
 
 config/name="Olympic"
+run/main_scene="res://Mundo_general/Menu/Control.tscn"
 config/icon="res://icon.png"
 
 [display]

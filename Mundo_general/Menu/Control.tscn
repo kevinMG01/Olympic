@@ -422,8 +422,8 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="PanelContainer" type="PanelContainer" parent="VBoxContainer/PanelContainer/Control"]
-margin_left = 331.442
-margin_right = 755.442
+margin_left = 331.441
+margin_right = 755.441
 margin_bottom = 144.0
 rect_min_size = Vector2( 424, 0 )
 custom_styles/panel = SubResource( 12 )
@@ -490,14 +490,14 @@ custom_styles/normal = SubResource( 11 )
 
 [node name="PanelContainer2" type="PanelContainer" parent="VBoxContainer/PanelContainer/HBoxContainer"]
 margin_left = 327.0
-margin_right = 752.427
+margin_right = 752.429
 margin_bottom = 144.0
-rect_min_size = Vector2( 425.427, 0 )
+rect_min_size = Vector2( 425.429, 0 )
 size_flags_horizontal = 3
 custom_styles/panel = SubResource( 22 )
 
 [node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/PanelContainer/HBoxContainer/PanelContainer2"]
-margin_right = 425.427
+margin_right = 425.429
 margin_bottom = 144.0
 
 [node name="CenterContainer" type="CenterContainer" parent="VBoxContainer/PanelContainer/HBoxContainer/PanelContainer2/VBoxContainer"]
@@ -536,7 +536,7 @@ align = 1
 valign = 1
 
 [node name="Button" type="Button" parent="VBoxContainer/PanelContainer/HBoxContainer/PanelContainer2"]
-margin_right = 425.427
+margin_right = 425.429
 margin_bottom = 144.0
 custom_styles/hover = SubResource( 9 )
 custom_styles/pressed = SubResource( 10 )
@@ -546,7 +546,7 @@ custom_styles/normal = SubResource( 11 )
 margin_left = 752.0
 margin_right = 1080.0
 margin_bottom = 144.0
-rect_min_size = Vector2( 0.569942, 0 )
+rect_min_size = Vector2( 0.568173, 0 )
 size_flags_horizontal = 3
 custom_styles/panel = SubResource( 24 )
 
