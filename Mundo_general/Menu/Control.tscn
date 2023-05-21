@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://icon.png" type="Texture" id=1]
 [ext_resource path="res://Mundo_general/Menu/Control.gd" type="Script" id=2]
@@ -23,10 +23,7 @@ bg_color = Color( 0.164706, 0.156863, 0.156863, 1 )
 [sub_resource type="StyleBoxFlat" id=12]
 bg_color = Color( 0.129412, 0.282353, 0.529412, 1 )
 
-[sub_resource type="StyleBoxFlat" id=8]
-draw_center = false
-border_width_left = 4
-border_color = Color( 0.0823529, 0.0823529, 0.0823529, 1 )
+[sub_resource type="StyleBoxEmpty" id=23]
 
 [sub_resource type="StyleBoxEmpty" id=9]
 
@@ -34,7 +31,9 @@ border_color = Color( 0.0823529, 0.0823529, 0.0823529, 1 )
 
 [sub_resource type="StyleBoxEmpty" id=11]
 
-[sub_resource type="StyleBoxEmpty" id=13]
+[sub_resource type="StyleBoxEmpty" id=22]
+
+[sub_resource type="StyleBoxEmpty" id=24]
 
 [sub_resource type="AnimationNodeAnimation" id=14]
 animation = "Button_step_001"
@@ -441,23 +440,22 @@ custom_constants/separation = 0
 margin_right = 327.0
 margin_bottom = 144.0
 size_flags_horizontal = 3
-custom_styles/panel = SubResource( 8 )
+custom_styles/panel = SubResource( 23 )
 
 [node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/PanelContainer/HBoxContainer/PanelContainer"]
-margin_left = 4.0
 margin_right = 327.0
 margin_bottom = 144.0
 
 [node name="CenterContainer" type="CenterContainer" parent="VBoxContainer/PanelContainer/HBoxContainer/PanelContainer/VBoxContainer"]
-margin_right = 323.0
+margin_right = 327.0
 margin_bottom = 126.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="Control" type="Control" parent="VBoxContainer/PanelContainer/HBoxContainer/PanelContainer/VBoxContainer/CenterContainer"]
-margin_left = 161.0
+margin_left = 163.0
 margin_top = 63.0
-margin_right = 161.0
+margin_right = 163.0
 margin_bottom = 63.0
 
 [node name="TextureRect" type="TextureRect" parent="VBoxContainer/PanelContainer/HBoxContainer/PanelContainer/VBoxContainer/CenterContainer/Control"]
@@ -475,7 +473,7 @@ stretch_mode = 6
 
 [node name="Label" type="Label" parent="VBoxContainer/PanelContainer/HBoxContainer/PanelContainer/VBoxContainer"]
 margin_top = 130.0
-margin_right = 323.0
+margin_right = 327.0
 margin_bottom = 144.0
 size_flags_horizontal = 3
 text = "Tienda"
@@ -483,7 +481,6 @@ align = 1
 valign = 1
 
 [node name="Button" type="Button" parent="VBoxContainer/PanelContainer/HBoxContainer/PanelContainer"]
-margin_left = 4.0
 margin_right = 327.0
 margin_bottom = 144.0
 focus_mode = 0
@@ -497,7 +494,7 @@ margin_right = 752.427
 margin_bottom = 144.0
 rect_min_size = Vector2( 425.427, 0 )
 size_flags_horizontal = 3
-custom_styles/panel = SubResource( 13 )
+custom_styles/panel = SubResource( 22 )
 
 [node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/PanelContainer/HBoxContainer/PanelContainer2"]
 margin_right = 425.427
@@ -551,23 +548,22 @@ margin_right = 1080.0
 margin_bottom = 144.0
 rect_min_size = Vector2( 0.569942, 0 )
 size_flags_horizontal = 3
-custom_styles/panel = SubResource( 8 )
+custom_styles/panel = SubResource( 24 )
 
 [node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/PanelContainer/HBoxContainer/PanelContainer3"]
-margin_left = 4.0
 margin_right = 328.0
 margin_bottom = 144.0
 
 [node name="CenterContainer" type="CenterContainer" parent="VBoxContainer/PanelContainer/HBoxContainer/PanelContainer3/VBoxContainer"]
-margin_right = 324.0
+margin_right = 328.0
 margin_bottom = 126.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="Control" type="Control" parent="VBoxContainer/PanelContainer/HBoxContainer/PanelContainer3/VBoxContainer/CenterContainer"]
-margin_left = 162.0
+margin_left = 164.0
 margin_top = 63.0
-margin_right = 162.0
+margin_right = 164.0
 margin_bottom = 63.0
 
 [node name="TextureRect" type="TextureRect" parent="VBoxContainer/PanelContainer/HBoxContainer/PanelContainer3/VBoxContainer/CenterContainer/Control"]
@@ -585,7 +581,7 @@ stretch_mode = 6
 
 [node name="Label" type="Label" parent="VBoxContainer/PanelContainer/HBoxContainer/PanelContainer3/VBoxContainer"]
 margin_top = 130.0
-margin_right = 324.0
+margin_right = 328.0
 margin_bottom = 144.0
 size_flags_horizontal = 3
 text = "Tienda"
@@ -593,7 +589,6 @@ align = 1
 valign = 1
 
 [node name="Button" type="Button" parent="VBoxContainer/PanelContainer/HBoxContainer/PanelContainer3"]
-margin_left = 4.0
 margin_right = 328.0
 margin_bottom = 144.0
 custom_styles/hover = SubResource( 9 )
@@ -613,6 +608,6 @@ anims/Button_step_003 = SubResource( 20 )
 
 [connection signal="scroll_ended" from="VBoxContainer/ScrollContainer" to="." method="_on_ScrollContainer_scroll_ended"]
 [connection signal="scroll_started" from="VBoxContainer/ScrollContainer" to="." method="_on_ScrollContainer_scroll_started"]
-[connection signal="pressed" from="VBoxContainer/PanelContainer/HBoxContainer/PanelContainer/Button" to="." method="_on_Button_pressed" binds= [ 1 ]]
-[connection signal="pressed" from="VBoxContainer/PanelContainer/HBoxContainer/PanelContainer2/Button" to="." method="_on_Button_pressed" binds= [ 2 ]]
-[connection signal="pressed" from="VBoxContainer/PanelContainer/HBoxContainer/PanelContainer3/Button" to="." method="_on_Button_pressed" binds= [ 3 ]]
+[connection signal="pressed" from="VBoxContainer/PanelContainer/HBoxContainer/PanelContainer/Button" to="." method="_on_Button_pressed" binds= [ 0 ]]
+[connection signal="pressed" from="VBoxContainer/PanelContainer/HBoxContainer/PanelContainer2/Button" to="." method="_on_Button_pressed" binds= [ 1 ]]
+[connection signal="pressed" from="VBoxContainer/PanelContainer/HBoxContainer/PanelContainer3/Button" to="." method="_on_Button_pressed" binds= [ 2 ]]
