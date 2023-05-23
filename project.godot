@@ -14,6 +14,10 @@ config/name="Olympic"
 run/main_scene="res://Mundo_general/Menu/Control.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+global_Var="*res://Global_Var/global_Var.gd"
+
 [display]
 
 window/size/width=1080

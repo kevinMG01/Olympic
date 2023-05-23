@@ -11,9 +11,6 @@ var scroll_to : float = 0 # asta cualdo queremos hacer
 var scroll_to_index : int = 0 # animation tree
 
 
-
-
-# Called when the node enters the scene tree for the first time.
 func _ready():
 	yield(get_tree(), "idle_frame")
 	scroller.scroll_horizontal = rect_size.x * 2 #nosda el tamaaño de la ventana y mueve 2 posicciones mas
@@ -21,7 +18,6 @@ func _ready():
 
 
 func _process(delta):
-	
 	
 	if is_manual_scrolling:
 		if abs(int(round(scroll_to))-scroller.scroll_horizontal) > 5:
@@ -45,8 +41,6 @@ func _process(delta):
 			set_process(false)
 		
 	pass
-
-
 
 # animacion de pantalla 
 func _on_ScrollContainer_scroll_started():
