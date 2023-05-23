@@ -15,5 +15,6 @@ func move():
 		movimiento.x -= cantidad
 	if Input.is_action_pressed("ui_right"):
 		movimiento.x += cantidad
-		
+	if Input.is_action_pressed("ui_down"):
+		movimiento.y += cantidad
 	pass
