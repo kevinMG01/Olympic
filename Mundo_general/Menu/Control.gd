@@ -58,3 +58,19 @@ func _on_Button_pressed(extra_arg_0):
 	is_manual_scrolling = true
 	set_process(true)
 	pass # Replace with function body.
+	
+
+#if body.get_name() == "Player":
+#		yield(get_tree().create_timer(0,5),"timeout")
+#		body.queue_free()
+#yield(get_tree().create_timer(1, 5),"timeout")
+
+func _on_salir_button_down():
+	get_tree().quit()
+	pass # Replace with function body.
+
+		#get_tree().change_scene("res://Mundo_general/Mundo/Mundo.tscn")
+
+func _on_jugar_button_down():
+	get_tree().quit()
+	pass # Replace with function body.
