@@ -13,7 +13,7 @@ export var speed = 5
 
 func _process(delta):
 	velocity = (front.global_position - back.global_position) * speed
-	rotation = front.global_position.angle_to(back.global_position)
+	#rotation = front.global_position.angle_to(back.global_position)
 
 
 
