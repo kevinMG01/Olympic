@@ -1,11 +1,10 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Player.gd" type="Script" id=1]
 [ext_resource path="res://Sprite/Player/Player_Azul/PJIdle (1).png" type="Texture" id=2]
 [ext_resource path="res://Sprite/Player/Player_Azul/PJIdle (3).png" type="Texture" id=3]
 [ext_resource path="res://Sprite/Player/Player_Azul/PJIdle (2).png" type="Texture" id=4]
 [ext_resource path="res://Sprite/Player/Player_Azul/PJIdle (4).png" type="Texture" id=5]
-[ext_resource path="res://Elementos/Joystick/Joystick.tscn" type="PackedScene" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 41, 62 )
@@ -32,12 +31,6 @@ frames = SubResource( 2 )
 animation = "Idle"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-
-[node name="Joystick" parent="." instance=ExtResource( 6 )]
-position = Vector2( 0, 448 )
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
