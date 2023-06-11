@@ -6,6 +6,7 @@
 
 [node name="Joystick" type="Node2D"]
 script = ExtResource( 3 )
+joystick_range = 100
 
 [node name="back" type="Sprite" parent="."]
 position = Vector2( -4, -2 )

@@ -1,4 +1,4 @@
-extends Node2D
+extends KinematicBody2D
 
 
 onready var back = $back
@@ -9,6 +9,45 @@ export var ease_valve = 0.25
 export var joystick_range = 200
 var screensize = Vector2.ZERO
 var range_arr
+
+
+
+
+
+
+
+var velocity = Vector2()
+var cantidad = 400
+
+func _physics_process(delta):
+	move()
+	
+	move_and_slide(velocity)
+	
+	pass
+
+func move():
+	velocity.x = 0
+	velocity.y = 0
+	if global_Var.mover_joystick_izquierda == 1:
+		velocity.x -= cantidad
+	elif global_Var.mover_joystick_derecha == 1:
+		velocity.x += cantidad
+	
+	if global_Var.mover_joystick_abajo == 1:
+		velocity.y -= cantidad
+	elif global_Var.mover_joystick_ariba == 1:
+		velocity.y += cantidad
+
+
+
+
+
+
+
+
+
+
 
 func _ready():
 	screensize = get_viewport_rect().size

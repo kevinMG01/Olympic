@@ -1,17 +1,187 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Elementos/Joystick/Joystick.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Sprite/mundo/fondos/Proto barrio pobre.png" type="Texture" id=2]
 [ext_resource path="res://Mundo_general/Mundo/Mundo.gd" type="Script" id=3]
+[ext_resource path="res://Sprite/mundo/casa/Casa2 320x320.png" type="Texture" id=4]
+[ext_resource path="res://Sprite/mundo/descarga.jpg" type="Texture" id=5]
+[ext_resource path="res://Sprite/mundo/canchas/cancha de basquet.png" type="Texture" id=6]
+[ext_resource path="res://Sprite/mundo/casa/Casa.png" type="Texture" id=7]
+[ext_resource path="res://Sprite/mundo/casa/Casa de prota.png" type="Texture" id=8]
+[ext_resource path="res://Sprite/mundo/canchas/cancha de futbol.png" type="Texture" id=9]
+[ext_resource path="res://Sprite/pelotas/p_basquet.png" type="Texture" id=10]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 7.88095, 15.565 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 18.1667, 14.9875 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 80.8333, 1.12 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 66.9286, 1.595 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 10, 21.13 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 22.725, 10 )
+
+[sub_resource type="CircleShape2D" id=9]
+radius = 14.0
+
+[sub_resource type="CircleShape2D" id=8]
+radius = 34.1321
 
 [node name="Mundo" type="Node2D"]
 script = ExtResource( 3 )
 
-[node name="Joystick" parent="." instance=ExtResource( 2 )]
-position = Vector2( 512, 1996 )
-__meta__ = {
-"_edit_group_": true
-}
+[node name="Descarga2" type="Sprite" parent="."]
+position = Vector2( 1209, 3051 )
+scale = Vector2( 36.1382, 48.4044 )
+texture = ExtResource( 5 )
+
+[node name="fondos" type="Node2D" parent="."]
+
+[node name="ProtoBarrioPobre" type="Sprite" parent="fondos"]
+position = Vector2( -668, 1167 )
+scale = Vector2( 3, 3 )
+texture = ExtResource( 2 )
+
+[node name="CanchaDeBasquet" type="Sprite" parent="fondos"]
+position = Vector2( -1566, 1918 )
+scale = Vector2( 2, 3 )
+texture = ExtResource( 6 )
+
+[node name="ProtoBarrioPobre2" type="Sprite" parent="fondos"]
+position = Vector2( 2397, 1102 )
+rotation = 1.56741
+scale = Vector2( 3, 3 )
+texture = ExtResource( 2 )
+
+[node name="ProtoBarrioPobre3" type="Sprite" parent="fondos"]
+position = Vector2( 2601, 4678 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 2 )
+
+[node name="casas" type="Node2D" parent="fondos"]
+
+[node name="Casa2320X320" type="Sprite" parent="fondos/casas"]
+position = Vector2( 1811, 2129 )
+scale = Vector2( 3.175, 3.875 )
+texture = ExtResource( 4 )
+
+[node name="CasaDeProta" type="Sprite" parent="fondos/casas"]
+position = Vector2( 3335, -243 )
+scale = Vector2( 1.25769, 2.13542 )
+texture = ExtResource( 8 )
+
+[node name="canchas" type="Node2D" parent="fondos"]
+
+[node name="CanchaDeFutbol" type="Sprite" parent="fondos/canchas"]
+position = Vector2( 3355, 1861 )
+scale = Vector2( 1.96667, 2.63333 )
+texture = ExtResource( 9 )
+
+[node name="CanchaDeBasquet" type="Sprite" parent="fondos/canchas"]
+position = Vector2( 1675, -159 )
+rotation = 0.325167
+scale = Vector2( 1.87778, 2.44444 )
+texture = ExtResource( 6 )
+
+[node name="CanchaDeFutbol2" type="Sprite" parent="fondos/canchas"]
+position = Vector2( 3708, 3418.88 )
+scale = Vector2( 2.93333, 3.15312 )
+texture = ExtResource( 9 )
+
+[node name="colicion_mundo" type="Node2D" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="colicion_mundo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="colicion_mundo/StaticBody2D"]
+position = Vector2( 305, 809 )
+polygon = PoolVector2Array( -408, -423, -340, -180, 139, -181, 359, -173, 418, -202, 452, -417, 322, -825, 62, -955, -312, -825 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="colicion_mundo/StaticBody2D"]
+polygon = PoolVector2Array( -2214, 807, -2094, 499, -2094, 427, -1902, 427, -1894, 407, -1862, 431, -1857, 403, -1541, 403, -1518, 411, -1482, 403, -1346, 423, -1258, 287, -1414, -129, -1470, -373, -1726, -369, -2205, -365 )
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="colicion_mundo/StaticBody2D"]
+polygon = PoolVector2Array( 710, 1969, 466, 1969, 466, 1969, 322, 1949, 274, 2021, 246, 2077, -38, 2089, -78, 2017, -130, 1925, 102, 1453, 610, 1445, 770, 1817 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="colicion_mundo/StaticBody2D"]
+position = Vector2( -2373.5, 1148.5 )
+scale = Vector2( 21, 100 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="colicion_mundo/StaticBody2D"]
+position = Vector2( 4331.5, 1093.25 )
+scale = Vector2( 21, 100 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="colicion_mundo/StaticBody2D"]
+position = Vector2( -872.5, -527 )
+scale = Vector2( 21, 100 )
+shape = SubResource( 4 )
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="colicion_mundo/StaticBody2D"]
+position = Vector2( 2568, -591 )
+scale = Vector2( 21, 100 )
+shape = SubResource( 4 )
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="colicion_mundo/StaticBody2D"]
+position = Vector2( -884.5, 2848.5 )
+scale = Vector2( 21, 100 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="colicion_mundo/StaticBody2D"]
+position = Vector2( 336, 4905 )
+scale = Vector2( 21, 100 )
+shape = SubResource( 6 )
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="colicion_mundo/StaticBody2D"]
+position = Vector2( 4848, 4617 )
+scale = Vector2( 21, 100 )
+shape = SubResource( 6 )
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="colicion_mundo/StaticBody2D"]
+position = Vector2( 2728.5, 6935 )
+scale = Vector2( 100, 21 )
+shape = SubResource( 7 )
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="colicion_mundo/StaticBody2D"]
+polygon = PoolVector2Array( 804, 2972, 623, 3481, 696, 3730, 1675, 3690, 1788, 3492, 1613, 2932, 1234, 2700 )
+
+[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="colicion_mundo/StaticBody2D"]
+polygon = PoolVector2Array( 1477, 1736, 1341, 2217, 1426, 2562, 2235, 2562, 2275, 2268, 2150, 1742, 1845, 1544 )
+
+[node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="colicion_mundo/StaticBody2D"]
+polygon = PoolVector2Array( 2943, -482, 2801, 78, 2875, 412, 3746, 367, 3853, 67, 3712, -487 )
+
+[node name="CollisionPolygon2D7" type="CollisionPolygon2D" parent="colicion_mundo/StaticBody2D"]
+polygon = PoolVector2Array( 3622, 5047, 3316, 5681, 3412, 5901, 3808, 5901, 3808, 5833, 3859, 5766, 4436, 5782, 4549, 5545, 4300, 5036 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="colicion_mundo/StaticBody2D"]
+position = Vector2( -1549, 1929 )
+shape = SubResource( 9 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 518, 1385 )
+
+[node name="Casa_tt_b_r" type="Sprite" parent="."]
+visible = false
+position = Vector2( 338, 1766 )
+scale = Vector2( 1.2, 1.2 )
+texture = ExtResource( 7 )
+
+[node name="juego_basquet_1" type="Area2D" parent="."]
+
+[node name="PBasquet" type="Sprite" parent="juego_basquet_1"]
+position = Vector2( -1550, 1928 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 10 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="juego_basquet_1"]
+position = Vector2( -1551, 1927 )
+shape = SubResource( 8 )

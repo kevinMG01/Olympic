@@ -1,4 +1,6 @@
-extends Node2D
+extends KinematicBody2D
+
+var mover = Vector2()
 
 onready var front = $Joystick/front
 onready var back = $Joystick/back
@@ -13,6 +15,8 @@ export var speed = 5
 #player.rotation = front.global_position.angle_to(back.global_position)
 
 func _process(_delta):
-#	player.velocity = (front.global_position - back.global_position) * speed
-	#player.rotation = front.global_position.angle_to(back.global_position)
-	pass
+	player.velocity = (front.global_position - back.global_position) * speed
+	
+	if global_Var.mover_joystick == true:
+		
+		pass
