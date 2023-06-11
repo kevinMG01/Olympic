@@ -59,10 +59,6 @@ func _on_Button_pressed(extra_arg_0):
 	pass # Replace with function body.
 	
 
-#if body.get_name() == "Player":
-#		yield(get_tree().create_timer(0,5),"timeout")
-#		body.queue_free()
-#yield(get_tree().create_timer(1, 5),"timeout")
 
 func _on_salir_button_down():
 	get_tree().quit()

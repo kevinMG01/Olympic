@@ -14,7 +14,8 @@ func _physics_process(delta):
 	if global_Var.evento_jugar == false:
 		move()
 	elif global_Var.evento_jugar == true:
-		print("en evento")
+		velocity.x = 0
+		velocity.y = 0
 	
 	move_and_slide(velocity)
 	

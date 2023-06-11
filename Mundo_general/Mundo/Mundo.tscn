@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Sprite/mundo/fondos/Proto barrio pobre.png" type="Texture" id=2]
@@ -9,7 +9,10 @@
 [ext_resource path="res://Sprite/mundo/casa/Casa.png" type="Texture" id=7]
 [ext_resource path="res://Sprite/mundo/casa/Casa de prota.png" type="Texture" id=8]
 [ext_resource path="res://Sprite/mundo/canchas/cancha de futbol.png" type="Texture" id=9]
-[ext_resource path="res://Sprite/pelotas/p_basquet.png" type="Texture" id=10]
+[ext_resource path="res://Sprite/pelotas/pelota de fut.png" type="Texture" id=10]
+[ext_resource path="res://Sprite/eventos/mini juego demo.png" type="Texture" id=11]
+[ext_resource path="res://Elementos/botones_rojo_verde/boton_verde/boton_verde.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Elementos/botones_rojo_verde/boton_rojo/boton_rojo.tscn" type="PackedScene" id=13]
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 7.88095, 15.565 )
@@ -30,10 +33,10 @@ extents = Vector2( 10, 21.13 )
 extents = Vector2( 22.725, 10 )
 
 [sub_resource type="CircleShape2D" id=9]
-radius = 14.0
+radius = 39.0512
 
 [sub_resource type="CircleShape2D" id=8]
-radius = 34.1321
+radius = 75.0267
 
 [node name="Mundo" type="Node2D"]
 script = ExtResource( 3 )
@@ -163,11 +166,39 @@ polygon = PoolVector2Array( 2943, -482, 2801, 78, 2875, 412, 3746, 367, 3853, 67
 polygon = PoolVector2Array( 3622, 5047, 3316, 5681, 3412, 5901, 3808, 5901, 3808, 5833, 3859, 5766, 4436, 5782, 4549, 5545, 4300, 5036 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="colicion_mundo/StaticBody2D"]
-position = Vector2( -1549, 1929 )
+position = Vector2( 3447, 1789 )
 shape = SubResource( 9 )
+
+[node name="juego_basquet_1" type="Area2D" parent="."]
+
+[node name="PelotaDeFut" type="Sprite" parent="juego_basquet_1"]
+position = Vector2( 3446, 1790 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 10 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="juego_basquet_1"]
+position = Vector2( 3446, 1792 )
+shape = SubResource( 8 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 518, 1385 )
+
+[node name="MiniJuegoDemo" type="Sprite" parent="Player"]
+position = Vector2( -13, -422 )
+scale = Vector2( 1.77045, 3 )
+texture = ExtResource( 11 )
+
+[node name="boton_verde" parent="Player" instance=ExtResource( 12 )]
+margin_left = 341.0
+margin_top = -404.0
+margin_right = 341.0
+margin_bottom = -404.0
+
+[node name="boton_rojo" parent="Player" instance=ExtResource( 13 )]
+margin_left = 41.0
+margin_top = -380.0
+margin_right = 41.0
+margin_bottom = -380.0
 
 [node name="Casa_tt_b_r" type="Sprite" parent="."]
 visible = false
@@ -175,13 +206,5 @@ position = Vector2( 338, 1766 )
 scale = Vector2( 1.2, 1.2 )
 texture = ExtResource( 7 )
 
-[node name="juego_basquet_1" type="Area2D" parent="."]
-
-[node name="PBasquet" type="Sprite" parent="juego_basquet_1"]
-position = Vector2( -1550, 1928 )
-scale = Vector2( 0.1, 0.1 )
-texture = ExtResource( 10 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="juego_basquet_1"]
-position = Vector2( -1551, 1927 )
-shape = SubResource( 8 )
+[connection signal="body_entered" from="juego_basquet_1" to="." method="_on_juego_basquet_1_body_entered"]
+[connection signal="body_exited" from="juego_basquet_1" to="." method="_on_juego_basquet_1_body_exited"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://icon.png" type="Texture" id=1]
 [ext_resource path="res://Mundo_general/Menu/Control.gd" type="Script" id=2]
@@ -6,6 +6,8 @@
 [ext_resource path="res://Sprite/Menu_inferior/Boton play.png" type="Texture" id=4]
 [ext_resource path="res://Sprite/Menu_inferior/Boton settings.png" type="Texture" id=5]
 [ext_resource path="res://Sprite/Menu_inferior/Boton off.png" type="Texture" id=6]
+[ext_resource path="res://Sprite/menu_principal/MENU3.jpg" type="Texture" id=7]
+[ext_resource path="res://Sprite/menu_principal/tienda.png" type="Texture" id=8]
 
 [sub_resource type="StyleBoxEmpty" id=4]
 
@@ -406,24 +408,29 @@ rect_min_size = Vector2( 1080, 0 )
 mouse_filter = 2
 custom_styles/panel = SubResource( 2 )
 
+[node name="Menu3" type="Sprite" parent="VBoxContainer/ScrollContainer/HBoxContainer/PanelContainer2"]
+position = Vector2( 543, 890 )
+scale = Vector2( 1, 2 )
+texture = ExtResource( 7 )
+
 [node name="Control" type="Control" parent="VBoxContainer/ScrollContainer/HBoxContainer/PanelContainer2"]
 margin_right = 1080.0
 margin_bottom = 1772.0
 
 [node name="jugar" type="Button" parent="VBoxContainer/ScrollContainer/HBoxContainer/PanelContainer2/Control"]
-margin_left = 448.0
-margin_top = 728.0
-margin_right = 648.0
-margin_bottom = 928.0
+margin_left = 396.0
+margin_top = 1128.0
+margin_right = 596.0
+margin_bottom = 1328.0
 icon = ExtResource( 1 )
 flat = true
 expand_icon = true
 
 [node name="salir" type="Button" parent="VBoxContainer/ScrollContainer/HBoxContainer/PanelContainer2/Control"]
-margin_left = 832.0
-margin_top = 80.0
-margin_right = 1032.0
-margin_bottom = 280.0
+margin_left = 846.0
+margin_top = 38.0
+margin_right = 1046.0
+margin_bottom = 238.0
 icon = ExtResource( 6 )
 flat = true
 expand_icon = true
@@ -435,6 +442,11 @@ margin_bottom = 1772.0
 rect_min_size = Vector2( 1080, 0 )
 mouse_filter = 2
 custom_styles/panel = SubResource( 3 )
+
+[node name="Tienda" type="Sprite" parent="VBoxContainer/ScrollContainer/HBoxContainer/PanelContainer3"]
+position = Vector2( 539, 888 )
+scale = Vector2( 3, 3 )
+texture = ExtResource( 8 )
 
 [node name="PanelContainer" type="PanelContainer" parent="VBoxContainer"]
 margin_top = 1776.0

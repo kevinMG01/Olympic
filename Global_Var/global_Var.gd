@@ -12,3 +12,5 @@ var mover_joystick_abajo = 0
 #para desactivar los movimientos del jugador
 var evento_jugar = false
 
+var boton_verde = false
+var boton_rojo = false 

@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Sprite/eventos/botones/boton_rojo.png" type="Texture" id=1]
+[ext_resource path="res://Elementos/botones_rojo_verde/boton_rojo/boton_rojo.gd" type="Script" id=2]
+
+[node name="boton_rojo" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+
+[node name="Button" type="Button" parent="."]
+margin_left = -107.0
+margin_top = -110.0
+margin_right = 105.0
+margin_bottom = 96.0
+icon = ExtResource( 1 )
+flat = true
+
+[connection signal="button_down" from="Button" to="." method="_on_Button_button_down"]
