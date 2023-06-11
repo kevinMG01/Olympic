@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://icon.png" type="Texture" id=1]
 [ext_resource path="res://Mundo_general/Menu/Control.gd" type="Script" id=2]
@@ -17,20 +17,6 @@ bg_color = Color( 0.0470588, 0.607843, 0.0745098, 1 )
 
 [sub_resource type="StyleBoxFlat" id=2]
 bg_color = Color( 0.0392157, 0.196078, 0.427451, 1 )
-
-[sub_resource type="StyleBoxEmpty" id=31]
-
-[sub_resource type="StyleBoxEmpty" id=32]
-
-[sub_resource type="StyleBoxEmpty" id=33]
-
-[sub_resource type="StyleBoxEmpty" id=34]
-
-[sub_resource type="StyleBoxEmpty" id=28]
-
-[sub_resource type="StyleBoxEmpty" id=29]
-
-[sub_resource type="StyleBoxEmpty" id=30]
 
 [sub_resource type="StyleBoxFlat" id=3]
 bg_color = Color( 0.65098, 0.0509804, 0.0509804, 1 )
@@ -400,13 +386,12 @@ theme = SubResource( 5 )
 scroll_vertical_enabled = false
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/ScrollContainer"]
-margin_right = 1080.0
+margin_right = 3240.0
 margin_bottom = 1772.0
 size_flags_vertical = 3
 custom_constants/separation = 0
 
 [node name="PanelContainer" type="PanelContainer" parent="VBoxContainer/ScrollContainer/HBoxContainer"]
-visible = false
 margin_right = 1080.0
 margin_bottom = 1772.0
 rect_min_size = Vector2( 1080, 0 )
@@ -414,130 +399,38 @@ mouse_filter = 2
 custom_styles/panel = SubResource( 1 )
 
 [node name="PanelContainer2" type="PanelContainer" parent="VBoxContainer/ScrollContainer/HBoxContainer"]
-margin_right = 1080.0
+margin_left = 1080.0
+margin_right = 2160.0
 margin_bottom = 1772.0
 rect_min_size = Vector2( 1080, 0 )
 mouse_filter = 2
 custom_styles/panel = SubResource( 2 )
 
-[node name="jugar" type="Control" parent="VBoxContainer/ScrollContainer/HBoxContainer/PanelContainer2"]
+[node name="Control" type="Control" parent="VBoxContainer/ScrollContainer/HBoxContainer/PanelContainer2"]
 margin_right = 1080.0
 margin_bottom = 1772.0
 
-[node name="VBoxContainer2" type="VBoxContainer" parent="VBoxContainer/ScrollContainer/HBoxContainer/PanelContainer2/jugar"]
-anchor_left = 0.415741
-anchor_top = 0.439052
-anchor_right = 1.41574
-anchor_bottom = 1.43905
-margin_right = -879.998
-margin_bottom = -1572.0
-__meta__ = {
-"_edit_use_anchors_": true
-}
+[node name="jugar" type="Button" parent="VBoxContainer/ScrollContainer/HBoxContainer/PanelContainer2/Control"]
+margin_left = 448.0
+margin_top = 728.0
+margin_right = 648.0
+margin_bottom = 928.0
+icon = ExtResource( 1 )
+flat = true
+expand_icon = true
 
-[node name="jugar" type="PanelContainer" parent="VBoxContainer/ScrollContainer/HBoxContainer/PanelContainer2/jugar/VBoxContainer2"]
-margin_right = 200.0
-margin_bottom = 200.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-custom_styles/panel = SubResource( 31 )
-
-[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/ScrollContainer/HBoxContainer/PanelContainer2/jugar/VBoxContainer2/jugar"]
-margin_right = 200.0
-margin_bottom = 200.0
-
-[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer/ScrollContainer/HBoxContainer/PanelContainer2/jugar/VBoxContainer2/jugar/VBoxContainer"]
-margin_right = 200.0
-margin_bottom = 200.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
-[node name="Control" type="Control" parent="VBoxContainer/ScrollContainer/HBoxContainer/PanelContainer2/jugar/VBoxContainer2/jugar/VBoxContainer/CenterContainer"]
-margin_left = 100.0
-margin_top = 100.0
-margin_right = 100.0
-margin_bottom = 100.0
-
-[node name="TextureRect" type="TextureRect" parent="VBoxContainer/ScrollContainer/HBoxContainer/PanelContainer2/jugar/VBoxContainer2/jugar/VBoxContainer/CenterContainer/Control"]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -100.0
-margin_top = -100.0
-margin_right = 100.0
-margin_bottom = 100.0
-texture = ExtResource( 1 )
-expand = true
-
-[node name="jugar" type="Button" parent="VBoxContainer/ScrollContainer/HBoxContainer/PanelContainer2/jugar/VBoxContainer2/jugar"]
-margin_right = 200.0
-margin_bottom = 200.0
-custom_styles/hover = SubResource( 32 )
-custom_styles/pressed = SubResource( 33 )
-custom_styles/normal = SubResource( 34 )
-
-[node name="salir" type="Control" parent="VBoxContainer/ScrollContainer/HBoxContainer/PanelContainer2"]
-margin_right = 1080.0
-margin_bottom = 1772.0
-
-[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/ScrollContainer/HBoxContainer/PanelContainer2/salir"]
-anchor_left = 0.763889
-anchor_top = 0.030474
-anchor_right = 1.76389
-anchor_bottom = 1.03047
-margin_right = -879.998
-margin_bottom = -1572.0
-__meta__ = {
-"_edit_use_anchors_": true
-}
-
-[node name="salir" type="PanelContainer" parent="VBoxContainer/ScrollContainer/HBoxContainer/PanelContainer2/salir/VBoxContainer"]
-margin_right = 200.0
-margin_bottom = 200.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-custom_styles/panel = SubResource( 31 )
-
-[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/ScrollContainer/HBoxContainer/PanelContainer2/salir/VBoxContainer/salir"]
-margin_right = 200.0
-margin_bottom = 200.0
-
-[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer/ScrollContainer/HBoxContainer/PanelContainer2/salir/VBoxContainer/salir/VBoxContainer"]
-margin_right = 200.0
-margin_bottom = 200.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
-[node name="Control" type="Control" parent="VBoxContainer/ScrollContainer/HBoxContainer/PanelContainer2/salir/VBoxContainer/salir/VBoxContainer/CenterContainer"]
-margin_left = 100.0
-margin_top = 100.0
-margin_right = 100.0
-margin_bottom = 100.0
-
-[node name="TextureRect" type="TextureRect" parent="VBoxContainer/ScrollContainer/HBoxContainer/PanelContainer2/salir/VBoxContainer/salir/VBoxContainer/CenterContainer/Control"]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -100.0
-margin_top = -100.0
-margin_right = 100.0
-margin_bottom = 100.0
-texture = ExtResource( 6 )
-expand = true
-
-[node name="salir" type="Button" parent="VBoxContainer/ScrollContainer/HBoxContainer/PanelContainer2/salir/VBoxContainer/salir"]
-margin_right = 200.0
-margin_bottom = 200.0
-custom_styles/hover = SubResource( 28 )
-custom_styles/pressed = SubResource( 29 )
-custom_styles/normal = SubResource( 30 )
+[node name="salir" type="Button" parent="VBoxContainer/ScrollContainer/HBoxContainer/PanelContainer2/Control"]
+margin_left = 832.0
+margin_top = 80.0
+margin_right = 1032.0
+margin_bottom = 280.0
+icon = ExtResource( 6 )
+flat = true
+expand_icon = true
 
 [node name="PanelContainer3" type="PanelContainer" parent="VBoxContainer/ScrollContainer/HBoxContainer"]
-visible = false
-margin_left = 1080.0
-margin_right = 2160.0
+margin_left = 2160.0
+margin_right = 3240.0
 margin_bottom = 1772.0
 rect_min_size = Vector2( 1080, 0 )
 mouse_filter = 2
@@ -743,8 +636,8 @@ anims/Button_step_003 = SubResource( 20 )
 
 [connection signal="scroll_ended" from="VBoxContainer/ScrollContainer" to="." method="_on_ScrollContainer_scroll_ended"]
 [connection signal="scroll_started" from="VBoxContainer/ScrollContainer" to="." method="_on_ScrollContainer_scroll_started"]
-[connection signal="button_down" from="VBoxContainer/ScrollContainer/HBoxContainer/PanelContainer2/jugar/VBoxContainer2/jugar/jugar" to="." method="_on_jugar_button_down"]
-[connection signal="button_down" from="VBoxContainer/ScrollContainer/HBoxContainer/PanelContainer2/salir/VBoxContainer/salir/salir" to="." method="_on_salir_button_down"]
+[connection signal="button_down" from="VBoxContainer/ScrollContainer/HBoxContainer/PanelContainer2/Control/jugar" to="." method="_on_jugar_button_down"]
+[connection signal="button_down" from="VBoxContainer/ScrollContainer/HBoxContainer/PanelContainer2/Control/salir" to="." method="_on_salir_button_down"]
 [connection signal="pressed" from="VBoxContainer/PanelContainer/HBoxContainer/PanelContainer/Button" to="." method="_on_Button_pressed" binds= [ 0 ]]
 [connection signal="pressed" from="VBoxContainer/PanelContainer/HBoxContainer/PanelContainer2/Button" to="." method="_on_Button_pressed" binds= [ 1 ]]
 [connection signal="pressed" from="VBoxContainer/PanelContainer/HBoxContainer/PanelContainer3/Button" to="." method="_on_Button_pressed" binds= [ 2 ]]

@@ -39,7 +39,6 @@ func _process(delta):
 			animation_tree["parameters/blend_position"] = int(round(scroll))
 			scroller.scroll_horizontal = rect_size.x * int(round(scroll))
 			set_process(false)
-		
 	pass
 
 # animacion de pantalla 
@@ -69,8 +68,7 @@ func _on_salir_button_down():
 	get_tree().quit()
 	pass # Replace with function body.
 
-		#get_tree().change_scene("res://Mundo_general/Mundo/Mundo.tscn")
 
 func _on_jugar_button_down():
-	get_tree().quit()
+	get_tree().change_scene("res://Mundo_general/Mundo/Mundo.tscn")
 	pass # Replace with function body.

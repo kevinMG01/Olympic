@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Sprite/Joystick/joystick_blak.png" type="Texture" id=1]
+[ext_resource path="res://Sprite/Joystick/joystick_contorrno.png" type="Texture" id=2]
+[ext_resource path="res://Elementos/Joystick/Joystick.gd" type="Script" id=3]
+
+[node name="Joystick" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="back" type="Sprite" parent="."]
+position = Vector2( -4, -2 )
+texture = ExtResource( 2 )
+
+[node name="front" type="Sprite" parent="."]
+position = Vector2( -4, -1 )
+texture = ExtResource( 1 )

@@ -1,8 +1,21 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Elementos/Joystick/Joystick.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Mundo_general/Mundo/Mundo.gd" type="Script" id=3]
 
 [node name="Mundo" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="Joystick" parent="." instance=ExtResource( 2 )]
+position = Vector2( 528, 1832 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 574, 717 )
+position = Vector2( 518, 1385 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 520, 1084 )
+current = true
