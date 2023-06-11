@@ -12,5 +12,5 @@ position = Vector2( -4, -2 )
 texture = ExtResource( 2 )
 
 [node name="front" type="Sprite" parent="."]
-position = Vector2( -4, -1 )
+position = Vector2( -4, -2 )
 texture = ExtResource( 1 )
