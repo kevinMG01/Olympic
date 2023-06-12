@@ -42,8 +42,9 @@ func _process(_delta):
 			$Player/boton_rojo.visible = false
 			$Player/JugarEvem.visible = true
 			$Player/pregunta.visible = true
-	if global_Var.bara_vida == 3:
-		print("hola")
+	if global_Var.energia == 0:
+		global_Var.energia = 5
+		get_tree().change_scene("res://Mundo_general/Menu/Control.tscn")
 #	player.velocity = (front.global_position - back.global_position) * speed
 	#player.rotation = front.global_position.angle_to(back.global_position)
 	pass
