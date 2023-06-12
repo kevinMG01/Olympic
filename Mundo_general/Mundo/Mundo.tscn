@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Sprite/mundo/fondos/Proto barrio pobre.png" type="Texture" id=2]
@@ -13,6 +13,7 @@
 [ext_resource path="res://Sprite/eventos/mini juego demo.png" type="Texture" id=11]
 [ext_resource path="res://Elementos/botones_rojo_verde/boton_verde/boton_verde.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Elementos/botones_rojo_verde/boton_rojo/boton_rojo.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Sprite/eventos/jugar_evem.png" type="Texture" id=14]
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 7.88095, 15.565 )
@@ -183,7 +184,13 @@ shape = SubResource( 8 )
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 518, 1385 )
 
+[node name="JugarEvem" type="Sprite" parent="Player"]
+position = Vector2( -19, -600 )
+scale = Vector2( 1.77045, 3 )
+texture = ExtResource( 14 )
+
 [node name="MiniJuegoDemo" type="Sprite" parent="Player"]
+visible = false
 position = Vector2( -13, -422 )
 scale = Vector2( 1.77045, 3 )
 texture = ExtResource( 11 )

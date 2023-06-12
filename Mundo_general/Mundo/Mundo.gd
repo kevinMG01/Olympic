@@ -21,6 +21,7 @@ func _process(_delta):
 		$Player/MiniJuegoDemo.visible = false
 		$Player/boton_verde.visible = false
 		$Player/boton_rojo.visible = false
+		$Player/JugarEvem.visible = false
 	
 	
 #	player.velocity = (front.global_position - back.global_position) * speed
@@ -32,6 +33,7 @@ func _process(_delta):
 func _on_juego_basquet_1_body_entered(body):
 	if body.get_name() == "Player":
 		global_Var.evento_jugar = true
+		$Player/JugarEvem.visible = true
 		$Player/MiniJuegoDemo.visible = true
 		$Player/boton_verde.visible = true
 		$Player/boton_rojo.visible = true
