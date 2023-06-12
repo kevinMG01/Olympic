@@ -1,6 +1,5 @@
-[gd_scene load_steps=29 format=2]
+[gd_scene load_steps=28 format=2]
 
-[ext_resource path="res://icon.png" type="Texture" id=1]
 [ext_resource path="res://Mundo_general/Menu/Control.gd" type="Script" id=2]
 [ext_resource path="res://Sprite/Menu_inferior/Boton shop.png" type="Texture" id=3]
 [ext_resource path="res://Sprite/Menu_inferior/Boton play.png" type="Texture" id=4]
@@ -418,11 +417,11 @@ margin_right = 1080.0
 margin_bottom = 1772.0
 
 [node name="jugar" type="Button" parent="VBoxContainer/ScrollContainer/HBoxContainer/PanelContainer2/Control"]
-margin_left = 396.0
-margin_top = 1128.0
-margin_right = 596.0
-margin_bottom = 1328.0
-icon = ExtResource( 1 )
+margin_left = 348.0
+margin_top = 1024.0
+margin_right = 724.0
+margin_bottom = 1408.0
+icon = ExtResource( 4 )
 flat = true
 expand_icon = true
 
