@@ -4,7 +4,7 @@ extends Control
 
 
 func _on_Button_button_down():
-	global_Var.evento_jugar = false
-	yield(get_tree().create_timer(5),"timeout")
+	#global_Var.evento_jugar = true
+	global_Var.pregunta = false
 	
 	pass # Replace with function body.

@@ -1,16 +1,23 @@
 extends Node2D
 
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func _process(delta):
+	if global_Var.bara_vida == 1 :
+		$Vida.visible = false
+	
+	if global_Var.bara_vida == 2 :
+		$Vida2.visible = false
+		
+	if global_Var.bara_vida == 3 :
+		$Vida3.visible = false
+	
+	if global_Var.bara_vida == 4 :
+		$Vida4.visible = false
+	
+	if global_Var.bara_vida == 5 :
+		$Vida5.visible = false
+	
+	
+	
+	
+	

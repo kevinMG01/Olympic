@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Sprite/mundo/fondos/Proto barrio pobre.png" type="Texture" id=2]
@@ -10,10 +10,11 @@
 [ext_resource path="res://Sprite/mundo/casa/Casa de prota.png" type="Texture" id=8]
 [ext_resource path="res://Sprite/mundo/canchas/cancha de futbol.png" type="Texture" id=9]
 [ext_resource path="res://Sprite/pelotas/pelota de fut.png" type="Texture" id=10]
-[ext_resource path="res://Sprite/eventos/mini juego demo.png" type="Texture" id=11]
+[ext_resource path="res://Sprite/eventos/botones/2.png" type="Texture" id=11]
 [ext_resource path="res://Elementos/botones_rojo_verde/boton_verde/boton_verde.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Elementos/botones_rojo_verde/boton_rojo/boton_rojo.tscn" type="PackedScene" id=13]
-[ext_resource path="res://Sprite/eventos/jugar_evem.png" type="Texture" id=14]
+[ext_resource path="res://Elementos/pregunta/pregunta.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Sprite/eventos/botones/1.png" type="Texture" id=16]
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 7.88095, 15.565 )
@@ -185,27 +186,34 @@ shape = SubResource( 8 )
 position = Vector2( 518, 1385 )
 
 [node name="JugarEvem" type="Sprite" parent="Player"]
-position = Vector2( -19, -600 )
-scale = Vector2( 1.77045, 3 )
-texture = ExtResource( 14 )
-
-[node name="MiniJuegoDemo" type="Sprite" parent="Player"]
 visible = false
-position = Vector2( -13, -422 )
+position = Vector2( -11, -528 )
 scale = Vector2( 1.77045, 3 )
 texture = ExtResource( 11 )
 
+[node name="MiniJuegoDemo" type="Sprite" parent="Player"]
+visible = false
+position = Vector2( -14, -536 )
+scale = Vector2( 1.77045, 3 )
+texture = ExtResource( 16 )
+
 [node name="boton_verde" parent="Player" instance=ExtResource( 12 )]
-margin_left = 341.0
-margin_top = -404.0
-margin_right = 341.0
-margin_bottom = -404.0
+margin_left = -39.0
+margin_top = -492.0
+margin_right = -39.0
+margin_bottom = -492.0
 
 [node name="boton_rojo" parent="Player" instance=ExtResource( 13 )]
-margin_left = 41.0
-margin_top = -380.0
-margin_right = 41.0
-margin_bottom = -380.0
+margin_left = -43.0
+margin_top = -156.0
+margin_right = -43.0
+margin_bottom = -156.0
+
+[node name="pregunta" parent="Player" instance=ExtResource( 15 )]
+margin_left = -279.0
+margin_top = -576.0
+margin_right = -279.0
+margin_bottom = -576.0
 
 [node name="Casa_tt_b_r" type="Sprite" parent="."]
 visible = false
