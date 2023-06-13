@@ -23,10 +23,9 @@ func _process(_delta):
 		$Player/boton_rojo.visible = true
 		$Player/JugarEvem.visible = false
 		$Player/pregunta.visible = false
-		global_Var.bara_vida = -1
 		#global_Var.pregunta = false
 	
-			
+	
 	if global_Var.evento_jugar == false:
 		$Player/MiniJuegoDemo.visible = false
 		$Player/boton_verde.visible = false
@@ -35,6 +34,7 @@ func _process(_delta):
 		$Player/pregunta.visible = false
 		
 # cuando tocamos el boton verde vuelve a apareser la pantalla anterior
+
 	if global_Var.evento_jugar == true:
 		if global_Var.pregunta == false:
 			$Player/MiniJuegoDemo.visible = false
@@ -42,9 +42,40 @@ func _process(_delta):
 			$Player/boton_rojo.visible = false
 			$Player/JugarEvem.visible = true
 			$Player/pregunta.visible = true
+	
+	
+	if global_Var.energia == 1:
+		$Player/pregunta_dormir.visible = true
+	
+	if global_Var.energia >= 2:
+		$Player/pregunta_dormir.visible = false
+	
+	if $Player/pregunta_dormir.visible == true:
+		$Player/MiniJuegoDemo.visible = false
+		$Player/boton_verde.visible = false
+		$Player/boton_rojo.visible = false
+		$Player/JugarEvem.visible = false
+		$Player/pregunta.visible = false
+		
+	if $Player/pregunta_dormir/dormir.visible == false:
+		$Player/MiniJuegoDemo.visible = false
+		$Player/boton_verde.visible = false
+		$Player/boton_rojo.visible = false
+		$Player/JugarEvem.visible = true
+		$Player/pregunta.visible = true
+		if global_Var.evento_jugar == false:
+			$Player/MiniJuegoDemo.visible = false
+			$Player/boton_verde.visible = false
+			$Player/boton_rojo.visible = false
+			$Player/JugarEvem.visible = false
+			$Player/pregunta.visible = false
+	
+		
+	
 	if global_Var.energia == 0:
-		global_Var.energia = 5
-		get_tree().change_scene("res://Mundo_general/Menu/Control.tscn")
+		$Player/Lesion.visible = true
+	if global_Var.energia >= 1:
+		$Player/Lesion.visible = false
 #	player.velocity = (front.global_position - back.global_position) * speed
 	#player.rotation = front.global_position.angle_to(back.global_position)
 	pass

@@ -18,7 +18,7 @@ var boton_rojo = false
 
 var energia = 5
 
-var bara_vida = 5
+var pregunta_22 = false
 
 
 

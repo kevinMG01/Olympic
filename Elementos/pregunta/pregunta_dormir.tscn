@@ -1,0 +1,27 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Elementos/pregunta/pregunta_dormir.gd" type="Script" id=1]
+
+[node name="pregunta_dormir" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="dormir" type="Button" parent="."]
+margin_left = 57.0
+margin_top = 40.0
+margin_right = 114.0
+margin_bottom = 60.0
+rect_scale = Vector2( 3, 3 )
+text = "Dormir"
+
+[node name="jugar" type="Button" parent="."]
+margin_left = 303.0
+margin_top = 42.0
+margin_right = 376.0
+margin_bottom = 62.0
+rect_scale = Vector2( 3, 3 )
+text = "Continuar"
+
+[connection signal="button_down" from="dormir" to="." method="_on_dormir_button_down"]
+[connection signal="button_down" from="jugar" to="." method="_on_jugar_button_down"]
